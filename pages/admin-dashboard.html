@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPSC Cloud | Admin Dashboard</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/admin.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Session Guard & Admin Guard -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabaseClient.js"></script>
+    <script>
+        (async function() {
+            if (window.supabaseClient) {
+                const { data: { session } } = await window.supabaseClient.auth.getSession();
+                if (!session) {
+                    window.location.href = "login.html";
+                    return;
+                }
+                
+                // Fetch user profile to verify is_admin
+                const { data: profile, error } = await window.supabaseClient
+                    .from('profiles')
+                    .select('is_admin')
+                    .eq('id', session.user.id)
+                    .single();
+
+                if (error || !profile || !profile.is_admin) {
+                    alert("Unauthorized access! Administrators only.");
+                    window.location.href = "dashboard.html";
+                }
+            }
+        })();
+    </script>
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-user-shield"></i>
+            <h2>Admin Portal</h2>
+        </div>
+        <ul class="menu">
+            <li>
+                <a href="dashboard.html">
+                    <i class="fas fa-house"></i>
+                    Student Dashboard
+                </a>
+            </li>
+            <li class="active">
+                <a href="admin-dashboard.html">
+                    <i class="fas fa-chart-line"></i>
+                    Admin Overview
+                </a>
+            </li>
+            <li>
+                <a href="#upload-section">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    Upload Resource
+                </a>
+            </li>
+            <li>
+                <a href="#manage-section">
+                    <i class="fas fa-tasks"></i>
+                    Manage Catalog
+                </a>
+            </li>
+            <li>
+                <a href="#audit-section">
+                    <i class="fas fa-history"></i>
+                    Download History
+                </a>
+            </li>
+        </ul>
+        <div class="logout">
+            <a href="#" id="admin-logout-btn">
+                <i class="fas fa-right-from-bracket"></i>
+                Logout
+            </a>
+        </div>
+    </aside>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="main-content">
+        <!-- Top Nav -->
+        <header class="top-nav">
+            <div class="welcome-text">
+                <h1>Admin Control Center</h1>
+                <p>Manage courses, reference papers, and study resources</p>
+            </div>
+            <div class="profile-info">
+                <span id="admin-profile-name">Administrator</span>
+            </div>
+        </header>
+
+        <!-- STATS CARDS -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon" style="background: #E0F2FE; color: #0284C7;">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div>
+                    <h3 id="stat-users">0</h3>
+                    <p>Total Users</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon" style="background: #DCFCE7; color: #16A34A;">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div>
+                    <h3 id="stat-pyqs">0</h3>
+                    <p>UPSC PYQs</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon" style="background: #FEF9C3; color: #CA8A04;">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div>
+                    <h3 id="stat-materials">0</h3>
+                    <p>Study Materials</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon" style="background: #FEE2E2; color: #DC2626;">
+                    <i class="fas fa-download"></i>
+                </div>
+                <div>
+                    <h3 id="stat-downloads">0</h3>
+                    <p>Total Downloads</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon" style="background: #F3E8FF; color: #7C3AED;">
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <div>
+                    <h3 id="stat-videos">0</h3>
+                    <p>Video Lectures</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- UPLOAD SECTION -->
+        <section class="admin-section" id="upload-section">
+            <h2><i class="fas fa-upload"></i> Upload New Resource</h2>
+            <div class="card-body">
+                <form id="upload-form">
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="resource-type">Resource Type</label>
+                            <select id="resource-type" required>
+                                <option value="" disabled selected>Select Resource Type</option>
+                                <option value="pyq">Question Paper (PYQ)</option>
+                                <option value="material">Study Material (PDF)</option>
+                                <option value="video">Video Lecture (YouTube)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="resource-title">Title / Name</label>
+                            <input type="text" id="resource-title" placeholder="e.g. Indian Polity Class Notes, GS Paper I" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group-row">
+                        <div class="form-group" id="container-subject">
+                            <label for="resource-subject">Subject</label>
+                            <input type="text" id="resource-subject" placeholder="e.g. Polity, Geography, Economy" required>
+                        </div>
+                        <div class="form-group" id="container-extra">
+                            <!-- Dynamically loaded inputs based on type -->
+                            <label for="resource-extra">Category / Stage / Year</label>
+                            <input type="text" id="resource-extra" placeholder="e.g. Prelims, Mains, 2026" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resource-desc">Description</label>
+                        <textarea id="resource-desc" rows="3" placeholder="Brief summary of the document contents..."></textarea>
+                    </div>
+
+                    <div class="form-group" id="container-file">
+                        <label for="resource-file">Upload PDF Document</label>
+                        <div class="file-drop-area">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <span class="file-message">Choose PDF file or drag it here</span>
+                            <input type="file" id="resource-file" accept="application/pdf" required>
+                        </div>
+                        <span id="upload-status" class="status-msg"></span>
+                    </div>
+
+                    <div class="form-group" id="container-url" style="display: none;">
+                        <label for="resource-url">YouTube Video URL / Link</label>
+                        <input type="url" id="resource-url" placeholder="e.g. https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-check-circle"></i> Save and Publish
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- MANAGE SECTION -->
+        <section class="admin-section" id="manage-section">
+            <h2><i class="fas fa-folder-open"></i> Manage Catalog</h2>
+            
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="switchTab('pyqs')">PYQs List</button>
+                <button class="tab-btn" onclick="switchTab('materials')">Study Materials List</button>
+                <button class="tab-btn" onclick="switchTab('videos')">Videos List</button>
+            </div>
+
+            <!-- PYQs Table -->
+            <div id="tab-pyqs" class="tab-content active">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>Subject</th>
+                                <th>Paper Type</th>
+                                <th>File Link</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="catalog-pyqs-body">
+                            <tr><td colspan="5" style="text-align: center;">Loading question papers...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Study Materials Table -->
+            <div id="tab-materials" class="tab-content">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Subject</th>
+                                <th>Category</th>
+                                <th>File Link</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="catalog-materials-body">
+                            <tr><td colspan="5" style="text-align: center;">Loading study materials...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Videos Table -->
+            <div id="tab-videos" class="tab-content">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Subject</th>
+                                <th>Duration</th>
+                                <th>YouTube Link</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="catalog-videos-body">
+                            <tr><td colspan="5" style="text-align: center;">Loading video lectures...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- AUDIT SECTION -->
+        <section class="admin-section" id="audit-section">
+            <h2><i class="fas fa-history"></i> User Download Audit Logs</h2>
+            <p>Track downloads executed by registered users in real-time.</p>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User Name</th>
+                            <th>Email</th>
+                            <th>Resource Type</th>
+                            <th>Timestamp</th>
+                        </tr>
+                    </thead>
+                    <tbody id="audit-logs-body">
+                        <tr><td colspan="4" style="text-align: center;">Loading audit trails...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+</div>
+
+<!-- Admin Logic script -->
+<script src="../js/admin.js"></script>
+</body>
+</html>

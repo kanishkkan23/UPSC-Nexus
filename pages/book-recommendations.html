@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPSC Recommended Reference Books</title>
+
+    <link rel="stylesheet" href="../css/resources.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Session Guard -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabaseClient.js"></script>
+    <script>
+        (async function() {
+            if (window.supabaseClient) {
+                const { data: { session } } = await window.supabaseClient.auth.getSession();
+                if (!session) {
+                    window.location.href = "login.html";
+                }
+            }
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="logo">
+            <i class="fa-solid fa-landmark"></i>
+            <h2>UPSC Hub</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="prelims.html">Prelims</a></li>
+                <li><a href="mains.html">Mains</a></li>
+                <li><a href="interview.html">Interview</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">Reference Material</span>
+            <h1>Standard Books Catalog</h1>
+            <h3>Most Trusted Resources for UPSC CSE Preparation</h3>
+            <p>
+                Having a curated and limited set of books is the key to clear UPSC. Here is the highly recommended standard booklist, subject by subject, verified by rank holders.
+            </p>
+        </div>
+        <div class="hero-image">
+            <img src="../assets/images/prelims.jpg" alt="Recommended Books Guide">
+        </div>
+    </section>
+
+    <!-- ================= BOOKLIST TABLES ================= -->
+    <section class="content-section">
+        <h2>Subject-wise Standard Booklist</h2>
+        <p>Minimize your resources, maximize your revisions. Here are the core books required for General Studies:</p>
+
+        <div class="pdf-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Book Name</th>
+                        <th>Author / Publication</th>
+                        <th>Recommended Category</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Polity</strong></td>
+                        <td>Indian Polity</td>
+                        <td>M. Laxmikanth</td>
+                        <td>Prelims + Mains (GS 2)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Modern History</strong></td>
+                        <td>A Brief History of Modern India</td>
+                        <td>Spectrum Publication</td>
+                        <td>Prelims + Mains (GS 1)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ancient & Medieval</strong></td>
+                        <td>Ancient and Medieval India</td>
+                        <td>Poonam Dalal Dahiya (or Old NCERT)</td>
+                        <td>Prelims + Mains (GS 1)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Geography</strong></td>
+                        <td>Certificate Physical and Human Geography</td>
+                        <td>G.C. Leong (with NCERT Class 11 & 12)</td>
+                        <td>Prelims + Mains (GS 1)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Economy</strong></td>
+                        <td>Indian Economy (or Vivek Singh)</td>
+                        <td>Ramesh Singh</td>
+                        <td>Prelims + Mains (GS 3)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Environment</strong></td>
+                        <td>Environment Catalog</td>
+                        <td>Shankar IAS Academy</td>
+                        <td>Prelims + Mains (GS 3)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ethics</strong></td>
+                        <td>Lexicon for Ethics, Integrity & Aptitude</td>
+                        <td>Chronicle Publications</td>
+                        <td>Mains (GS 4)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Art & Culture</strong></td>
+                        <td>Indian Art and Culture</td>
+                        <td>Nitin Singhania</td>
+                        <td>Prelims + Mains (GS 1)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Security & Disaster</strong></td>
+                        <td>Challenges to Internal Security of India</td>
+                        <td>Ashok Kumar</td>
+                        <td>Mains (GS 3)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ================= NCERT RECOMMENDATIONS ================= -->
+    <section class="content-section">
+        <h2>Essential NCERTs (Class VI - XII)</h2>
+        <p>Before reading standard references, build your foundation with these NCERTs:</p>
+        <ul class="resource-list">
+            <li><strong>Polity</strong> — Class XI (Indian Constitution at Work), Class XII (Politics in India Since Independence).</li>
+            <li><strong>History</strong> — Class XI (Themes in Indian History Parts 1-3), Class XII (Modern Themes).</li>
+            <li><strong>Geography</strong> — Class XI (Fundamentals of Physical Geography & India: Physical Environment), Class XII (India: People and Economy).</li>
+            <li><strong>Economics</strong> — Class XI (Indian Economic Development), Class XII (Introductory Macroeconomics).</li>
+            <li><strong>Art & Culture</strong> — Class XI (An Introduction to Indian Art).</li>
+        </ul>
+    </section>
+
+    <!-- ================= ACTION ================= -->
+    <section class="action-section">
+        <h2>Ready to Practice?</h2>
+        <p>Read standard materials and check your preparation with PYQs.</p>
+        <div class="action-buttons">
+            <a href="pyq.html" class="btn-primary">Get Past Question Papers</a>
+            <a href="dashboard.html" class="btn-outline">Back to Dashboard</a>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <p class="copyright">
+            © 2026 UPSC Cloud Portal | All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+</html>

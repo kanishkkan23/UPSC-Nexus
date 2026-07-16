@@ -1,0 +1,1222 @@
+/*==========================================================
+                GOOGLE FONT & RESET
+==========================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#F0FDF4;
+
+    color:#374151;
+
+    line-height:1.8;
+
+}
+
+/*==========================================================
+                    HEADER
+==========================================================*/
+
+.header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:#065F46;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:white;
+
+}
+
+.logo i{
+
+    font-size:30px;
+
+    color:#FBBF24;
+
+}
+
+.logo h2{
+
+    font-size:28px;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:28px;
+
+}
+
+nav ul li a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:500;
+
+    transition:.3s;
+
+    padding-bottom:5px;
+
+}
+
+nav ul li a:hover,
+
+nav ul li a.active{
+
+    color:#FBBF24;
+
+    border-bottom:2px solid #FBBF24;
+
+}
+
+/*==========================================================
+                    HERO SECTION
+==========================================================*/
+
+.hero{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:60px;
+
+    padding:80px 8%;
+
+    background:linear-gradient(135deg,#047857,#0F766E);
+
+    color:white;
+
+}
+
+.hero-content{
+
+    flex:1;
+
+}
+
+.badge{
+
+    display:inline-block;
+
+    background:#FBBF24;
+
+    color:#065F46;
+
+    padding:8px 20px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.hero-content h1{
+
+    font-size:56px;
+
+    margin-bottom:20px;
+
+    line-height:1.2;
+
+}
+
+.hero-content h3{
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+    color:#D1FAE5;
+
+}
+
+.hero-content p{
+
+    font-size:17px;
+
+    margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-outline{
+
+    padding:15px 32px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-primary{
+
+    background:#FBBF24;
+
+    color:#065F46;
+
+}
+
+.btn-primary:hover{
+
+    background:white;
+
+}
+
+.btn-secondary{
+
+    border:2px solid white;
+
+    color:white;
+
+}
+
+.btn-secondary:hover{
+
+    background:white;
+
+    color:#065F46;
+
+}
+
+.hero-image{
+
+    flex:1;
+
+    text-align:center;
+
+}
+
+.hero-image img{
+
+    width:100%;
+
+    max-width:520px;
+
+    border-radius:20px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+}
+
+/*==========================================================
+                CONTENT SECTION
+==========================================================*/
+
+.content-section{
+
+    width:85%;
+
+    margin:70px auto;
+
+}
+
+.content-section h2{
+
+    font-size:38px;
+
+    color:#065F46;
+
+    margin-bottom:25px;
+
+    position:relative;
+
+}
+
+.content-section h2::after{
+
+    content:"";
+
+    width:90px;
+
+    height:4px;
+
+    background:#FBBF24;
+
+    display:block;
+
+    margin-top:10px;
+
+    border-radius:10px;
+
+}
+
+.content-section h3{
+
+    color:#047857;
+
+    margin-top:35px;
+
+    margin-bottom:15px;
+
+    font-size:26px;
+
+}
+
+.content-section p{
+
+    margin-bottom:18px;
+
+    text-align:justify;
+
+    font-size:17px;
+
+    color:#4B5563;
+
+}
+
+.section-divider{
+
+    margin:40px 0;
+
+    border:none;
+
+    border-top:1px solid #D1D5DB;
+
+}
+
+/*==========================================================
+                TABLE STYLING
+==========================================================*/
+
+.table-container{
+
+    overflow-x:auto;
+
+    margin-top:30px;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+thead{
+
+    background:#065F46;
+
+    color:white;
+
+}
+
+thead th{
+
+    padding:18px;
+
+    text-align:center;
+
+    font-size:18px;
+
+}
+
+tbody td{
+
+    padding:16px;
+
+    text-align:center;
+
+    border-bottom:1px solid #E5E7EB;
+
+    transition:.3s;
+
+}
+
+tbody tr:nth-child(even){
+
+    background:#F9FAFB;
+
+}
+
+tbody tr:hover{
+
+    background:#DCFCE7;
+
+}
+
+/*==========================================================
+                HIGHLIGHT BOX
+==========================================================*/
+
+.highlight-box{
+
+    margin:30px 0;
+
+    padding:28px;
+
+    background:linear-gradient(135deg,#047857,#10B981);
+
+    color:white;
+
+    border-radius:18px;
+
+    box-shadow:0 15px 35px rgba(4,120,87,.25);
+
+}
+
+.highlight-box h3{
+
+    color:#FBBF24;
+
+    margin-bottom:15px;
+
+}
+
+.highlight-box p{
+
+    color:white;
+
+    margin:0;
+
+}
+
+/*==========================================================
+                DAF LIST
+==========================================================*/
+
+.detailed-list{
+
+    margin-top:25px;
+
+    margin-left:25px;
+
+}
+
+.detailed-list li{
+
+    margin-bottom:14px;
+
+    color:#374151;
+
+    font-size:17px;
+
+}
+
+/*==========================================================
+                ACCORDION
+==========================================================*/
+
+.accordion{
+
+    margin-top:35px;
+
+}
+
+.accordion-item{
+
+    background:white;
+
+    margin-bottom:18px;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.accordion-btn{
+
+    width:100%;
+
+    padding:20px 25px;
+
+    border:none;
+
+    background:#ECFDF5;
+
+    color:#065F46;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    transition:.3s;
+
+}
+
+.accordion-btn:hover{
+
+    background:#D1FAE5;
+
+}
+
+.accordion-btn span{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+}
+
+.accordion-content{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .4s ease;
+
+    background:white;
+
+}
+
+.accordion-content p{
+
+    padding:20px 25px;
+
+    margin:0;
+
+}
+
+/*==========================================================
+                TIMELINE
+==========================================================*/
+
+.timeline{
+
+    position:relative;
+
+    margin-top:40px;
+
+    padding-left:40px;
+
+    border-left:4px solid #10B981;
+
+}
+
+.timeline-item{
+
+    position:relative;
+
+    margin-bottom:40px;
+
+    padding-left:30px;
+
+}
+
+.timeline-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-42px;
+
+    top:8px;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:#FBBF24;
+
+    border:4px solid #047857;
+
+}
+
+.timeline-item h3{
+
+    margin-bottom:10px;
+
+    color:#065F46;
+
+}
+
+.timeline-item p{
+
+    margin-bottom:0;
+
+}
+
+/*==========================================================
+                DO'S & DON'TS
+==========================================================*/
+
+.dos-donts{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+    margin-top:40px;
+
+}
+
+.dos,
+.donts{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.dos{
+
+    border-left:6px solid #10B981;
+
+}
+
+.donts{
+
+    border-left:6px solid #EF4444;
+
+}
+
+.dos h3{
+
+    color:#047857;
+
+    margin-bottom:20px;
+
+}
+
+.donts h3{
+
+    color:#DC2626;
+
+    margin-bottom:20px;
+
+}
+
+.dos ul,
+.donts ul{
+
+    padding-left:22px;
+
+}
+
+.dos li,
+.donts li{
+
+    margin-bottom:14px;
+
+    color:#4B5563;
+
+}
+
+/*==========================================================
+                QUESTION GENERATOR
+==========================================================*/
+
+.question-generator{
+
+    margin-top:40px;
+
+    text-align:center;
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:18px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.question-generator button{
+
+    cursor:pointer;
+
+}
+
+#questionBox{
+
+    margin-top:30px;
+
+    padding:30px;
+
+    background:#ECFDF5;
+
+    border-left:6px solid #10B981;
+
+    border-radius:12px;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    color:#065F46;
+
+    min-height:100px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.4s;
+
+}
+
+/*==========================================================
+                MOTIVATION SECTION
+==========================================================*/
+
+.motivation-section{
+
+    width:85%;
+
+    margin:80px auto;
+
+    padding:60px;
+
+    border-radius:20px;
+
+    background:linear-gradient(135deg,#065F46,#10B981);
+
+    color:white;
+
+    text-align:center;
+
+}
+
+.motivation-section h2{
+
+    font-size:38px;
+
+    margin-bottom:25px;
+
+}
+
+.motivation-section blockquote{
+
+    font-size:22px;
+
+    font-style:italic;
+
+    line-height:1.8;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+/*==========================================================
+                ACTION SECTION
+==========================================================*/
+
+.action-section{
+
+    width:85%;
+
+    margin:70px auto;
+
+    text-align:center;
+
+    padding:50px;
+
+    background:#ECFDF5;
+
+    border-radius:20px;
+
+}
+
+.action-section h2{
+
+    color:#065F46;
+
+    margin-bottom:18px;
+
+}
+
+.action-section p{
+
+    margin-bottom:30px;
+
+}
+
+.action-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.btn-outline{
+
+    border:2px solid #065F46;
+
+    color:#065F46;
+
+    background:white;
+
+}
+
+.btn-outline:hover{
+
+    background:#065F46;
+
+    color:white;
+
+}
+
+/*==========================================================
+                    FOOTER
+==========================================================*/
+
+.footer{
+
+    margin-top:80px;
+
+    background:#1F2937;
+
+    color:white;
+
+    padding:60px 8% 30px;
+
+}
+
+.footer-content{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:40px;
+
+}
+
+.footer h3{
+
+    color:#FBBF24;
+
+    margin-bottom:18px;
+
+}
+
+.footer p{
+
+    color:#D1D5DB;
+
+}
+
+.footer ul{
+
+    list-style:none;
+
+}
+
+.footer ul li{
+
+    margin-bottom:12px;
+
+}
+
+.footer ul li a{
+
+    color:#D1D5DB;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.footer ul li a:hover{
+
+    color:#FBBF24;
+
+}
+
+.footer hr{
+
+    margin:35px 0;
+
+    border:none;
+
+    height:1px;
+
+    background:#4B5563;
+
+}
+
+.footer .copyright{
+
+    text-align:center;
+
+    color:#9CA3AF;
+
+}
+
+/*==========================================================
+                SCROLLBAR
+==========================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#F3F4F6;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#10B981;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#047857;
+
+}
+
+/*==========================================================
+                BUTTON RIPPLE EFFECT
+==========================================================*/
+
+.btn-primary,
+.btn-secondary,
+.btn-outline{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.ripple{
+
+    position:absolute;
+
+    width:15px;
+
+    height:15px;
+
+    background:rgba(255,255,255,.7);
+
+    border-radius:50%;
+
+    transform:scale(0);
+
+    animation:rippleEffect .6s linear;
+
+    pointer-events:none;
+
+}
+
+@keyframes rippleEffect{
+
+    to{
+
+        transform:scale(25);
+
+        opacity:0;
+
+    }
+
+}
+
+/*==========================================================
+                TOAST ANIMATION
+==========================================================*/
+
+@keyframes slideIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(80px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/*==========================================================
+                FADE UP ANIMATION
+==========================================================*/
+
+.content-section,
+.motivation-section,
+.action-section{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+                RESPONSIVE DESIGN
+==========================================================*/
+
+@media(max-width:992px){
+
+    .hero{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .hero-content h1{
+
+        font-size:44px;
+
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .header{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    nav ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:18px;
+
+    }
+
+    .content-section{
+
+        width:92%;
+
+    }
+
+    .motivation-section{
+
+        width:92%;
+
+        padding:40px;
+
+    }
+
+    .action-section{
+
+        width:92%;
+
+        padding:40px;
+
+    }
+
+    .timeline{
+
+        padding-left:25px;
+
+    }
+
+    .timeline-item{
+
+        padding-left:20px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .hero{
+
+        padding:60px 6%;
+
+    }
+
+    .hero-content h1{
+
+        font-size:34px;
+
+    }
+
+    .hero-content h3{
+
+        font-size:22px;
+
+    }
+
+    .content-section h2{
+
+        font-size:30px;
+
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-outline{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    .question-generator{
+
+        padding:25px;
+
+    }
+
+    #questionBox{
+
+        font-size:17px;
+
+        padding:20px;
+
+    }
+
+    .motivation-section{
+
+        padding:30px;
+
+    }
+
+    .motivation-section blockquote{
+
+        font-size:18px;
+
+    }
+
+}
+
+/*==========================================================
+                END OF INTERVIEW CSS
+==========================================================*/

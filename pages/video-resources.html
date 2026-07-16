@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPSC Video Resources</title>
+
+    <link rel="stylesheet" href="../css/resources.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Session Guard -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabaseClient.js"></script>
+    <script>
+        (async function () {
+            if (window.supabaseClient) {
+                const { data: { session } } = await window.supabaseClient.auth.getSession();
+                if (!session) {
+                    window.location.href = "login.html";
+                }
+            }
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="logo">
+            <i class="fa-solid fa-landmark"></i>
+            <h2>UPSC Hub</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="prelims.html">Prelims</a></li>
+                <li><a href="mains.html">Mains</a></li>
+                <li><a href="interview.html">Interview</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">Video Learning</span>
+            <h1>Video Resources</h1>
+            <h3>Learn with Curated UPSC Video Lectures</h3>
+            <p>
+                Watch subject-wise video lectures from trusted educators.
+                Visual learning strengthens conceptual clarity and helps
+                retain complex topics for Prelims, Mains, and Interview.
+            </p>
+            <div class="hero-buttons">
+                <a href="#video-gallery" class="btn-primary">Browse Videos</a>
+                <a href="study-materials.html" class="btn-secondary">Study Materials</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="../assets/images/background3.jpg" alt="Video Resources">
+        </div>
+    </section>
+
+    <!-- ================= VIDEO GALLERY ================= -->
+    <section class="content-section" id="video-gallery">
+        <h2>Subject-wise Video Lectures</h2>
+        <p>
+            These video resources cover the most critical UPSC subjects.
+        </p>
+
+        <div class="video-grid">
+
+            <div class="video-box">
+                <i class="fa-brands fa-youtube"></i>
+                <h3>Indian Polity</h3>
+                <p>Learn the Indian Constitution, Parliament, Judiciary, and Governance.</p>
+                <button class="resource-btn"
+                    onclick="alert('Video lectures will be available after backend integration.')">Watch Now</button>
+            </div>
+
+            <div class="video-box">
+                <i class="fa-brands fa-youtube"></i>
+                <h3>Modern History</h3>
+                <p>Indian National Movement, British Rule, and Post-Independence History.</p>
+                <button class="resource-btn"
+                    onclick="alert('Video lectures will be available after backend integration.')">Watch Now</button>
+            </div>
+
+            <div class="video-box">
+                <i class="fa-brands fa-youtube"></i>
+                <h3>Geography</h3>
+                <p>Physical, Indian, and World Geography with map-based learning.</p>
+                <button class="resource-btn"
+                    onclick="alert('Video lectures will be available after backend integration.')">Watch Now</button>
+            </div>
+
+            <div class="video-box">
+                <i class="fa-brands fa-youtube"></i>
+                <h3>Economy</h3>
+                <p>Macro & Micro Economics, Budget Analysis, Banking, and Inflation.</p>
+                <button class="resource-btn"
+                    onclick="alert('Video lectures will be available after backend integration.')">Watch Now</button>
+            </div>
+
+            <div class="video-box">
+                <i class="fa-brands fa-youtube"></i>
+                <h3>Environment & Ecology</h3>
+                <p>Biodiversity, Climate Change, Conservation, and Environmental Policies.</p>
+                <button class="resource-btn"
+                    onclick="alert('Video lectures will be available after backend integration.')">Watch Now</button>
+            </div>
+
+            <div class="video-box">
+                <i class="fa-brands fa-youtube"></i>
+                <h3>Ethics & Case Studies</h3>
+                <p>Ethical frameworks, Thinkers, Moral Dilemmas, and GS4 answer writing.</p>
+                <button class="resource-btn"
+                    onclick="alert('Video lectures will be available after backend integration.')">Watch Now</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= MOTIVATION ================= -->
+    <section class="motivation-section">
+        <h2>Visual Learning Accelerates Understanding</h2>
+        <blockquote>
+            "Tell me and I forget. Teach me and I remember. Involve me and I learn."
+            — Benjamin Franklin
+        </blockquote>
+    </section>
+
+    <!-- ================= ACTION ================= -->
+    <section class="action-section">
+        <h2>Explore More Resources</h2>
+        <p>Complement your video learning with study materials and previous year papers.</p>
+        <div class="action-buttons">
+            <a href="study-materials.html" class="btn-primary">Study Materials</a>
+            <a href="pyq.html" class="btn-secondary">Download PYQs</a>
+            <a href="dashboard.html" class="btn-outline">Back to Dashboard</a>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <p class="copyright">
+            © 2026 UPSC Cloud Portal | All Rights Reserved.
+        </p>
+    </footer>
+
+    <script src="../js/videoResources.js"></script>
+</body>
+
+</html>

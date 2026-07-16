@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>UPSC Cloud | Dashboard</title>
+
+    <link rel="stylesheet"
+        href="../css/dashboard.css">
+
+    <!-- Google Font -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- ===========================
+            SIDEBAR
+    ============================ -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-landmark"></i>
+
+            <h2>UPSC Hub</h2>
+
+        </div>
+
+        <ul class="menu">
+
+            <li class="active">
+
+                <a href="dashboard.html">
+
+                    <i class="fas fa-house"></i>
+
+                    Dashboard
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="prelims.html">
+
+                    <i class="fas fa-book-open"></i>
+
+                    Preliminary
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="mains.html">
+
+                    <i class="fas fa-pen"></i>
+
+                    Mains
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="interview.html">
+
+                    <i class="fas fa-user-tie"></i>
+
+                    Interview
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="current-affairs.html">
+
+                    <i class="fas fa-newspaper"></i>
+
+                    Current Affairs
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="pyq.html">
+
+                    <i class="fas fa-file-pdf"></i>
+
+                    PYQs
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="study-materials.html">
+
+                    <i class="fas fa-folder-open"></i>
+
+                    Study Materials
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="video-resources.html">
+
+                    <i class="fab fa-youtube"></i>
+
+                    Video Lectures
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="exam-calendar.html">
+
+                    <i class="fas fa-calendar-days"></i>
+
+                    Exam Calendar
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="profile.html">
+
+                    <i class="fas fa-user-circle"></i>
+
+                    Profile
+
+                </a>
+
+            </li>
+
+        </ul>
+
+        <div class="logout">
+
+            <a href="login.html">
+
+                <i class="fas fa-right-from-bracket"></i>
+
+                Logout
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ===========================
+            MAIN CONTENT
+    ============================ -->
+
+    <main class="main-content">
+
+        <!-- Top Navigation -->
+
+        <header class="topbar">
+
+            <div class="search-box">
+
+                <i class="fas fa-search"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search resources...">
+
+            </div>
+
+            <div class="top-icons">
+
+                <i class="fas fa-bell"></i>
+
+                <i class="fas fa-envelope"></i>
+
+                <div class="profile">
+
+                    <img id="topbar-avatar"
+                        src="../assets/images/user.png"
+                        alt="User"
+                        style="border-radius:50%;width:40px;height:40px;object-fit:cover;">
+
+                    <span>Welcome, Aspirant</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ===========================
+            WELCOME BANNER
+        ============================ -->
+
+        <section class="welcome-banner">
+
+            <div class="welcome-text">
+
+                <h1>
+
+                    Welcome Back 👋
+
+                </h1>
+
+                <h2>
+
+                    Continue Your UPSC Preparation Journey
+
+                </h2>
+
+                <p>
+
+                    "Success is the sum of small efforts,
+                    repeated day in and day out."
+
+                </p>
+
+                <button>
+
+                    Continue Learning
+
+                </button>
+
+            </div>
+
+            <div class="welcome-image">
+
+                <img id="welcome-avatar" src="../assets/images/user.png"
+                    alt="Dashboard">
+
+            </div>
+
+        </section>
+
+                <!-- ===========================
+                QUICK ACCESS
+        ============================ -->
+
+        <section class="quick-access">
+
+            <h2>Quick Access</h2>
+
+            <div class="card-container">
+
+                <div class="dashboard-card prelims">
+
+                    <i class="fas fa-book-open"></i>
+
+                    <h3>Preliminary Exam</h3>
+
+                    <p>Start your Prelims preparation with syllabus, PYQs and strategies.</p>
+
+                    <a href="prelims.html">Explore →</a>
+
+                </div>
+
+                <div class="dashboard-card mains">
+
+                    <i class="fas fa-pen-nib"></i>
+
+                    <h3>Main Examination</h3>
+
+                    <p>Master answer writing, GS Papers and Essay preparation.</p>
+
+                    <a href="mains.html">Explore →</a>
+
+                </div>
+
+                <div class="dashboard-card interview">
+
+                    <i class="fas fa-user-tie"></i>
+
+                    <h3>Personality Test</h3>
+
+                    <p>Improve communication, confidence and interview skills.</p>
+
+                    <a href="interview.html">Explore →</a>
+
+                </div>
+
+                <div class="dashboard-card affairs">
+
+                    <i class="fas fa-newspaper"></i>
+
+                    <h3>Current Affairs</h3>
+
+                    <p>Read daily national and international current affairs.</p>
+
+                    <a href="current-affairs.html">Explore →</a>
+
+                </div>
+
+                <div class="dashboard-card videos" style="background: #F5F3FF; border-left: 5px solid #7C3AED;">
+
+                    <i class="fab fa-youtube" style="color: #7C3AED;"></i>
+
+                    <h3>Video Lectures</h3>
+
+                    <p>Watch subject-wise video lectures from trusted educators.</p>
+
+                    <a href="video-resources.html" style="color: #7C3AED;">Watch Now →</a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ===========================
+                PROGRESS SECTION
+        ============================ -->
+
+        <section class="progress-section">
+
+            <h2>Your Learning Progress</h2>
+
+            <div class="progress-grid">
+
+                <div class="progress-card">
+
+                    <h3>Prelims</h3>
+
+                    <div class="progress-bar">
+
+                        <div class="progress-fill prelims-fill">
+
+                            70%
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="progress-card">
+
+                    <h3>Mains</h3>
+
+                    <div class="progress-bar">
+
+                        <div class="progress-fill mains-fill">
+
+                            45%
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="progress-card">
+
+                    <h3>Interview</h3>
+
+                    <div class="progress-bar">
+
+                        <div class="progress-fill interview-fill">
+
+                            20%
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ===========================
+                STUDY PLANNER
+        ============================ -->
+
+        <section class="planner">
+
+            <div class="planner-box">
+
+                <h2>
+
+                    <i class="fas fa-list-check"></i>
+
+                    Today's Study Plan
+
+                </h2>
+
+                <ul>
+
+                    <li>
+
+                        <input type="checkbox">
+
+                        Read Polity (Laxmikanth)
+
+                    </li>
+
+                    <li>
+
+                        <input type="checkbox">
+
+                        Solve 25 Prelims MCQs
+
+                    </li>
+
+                    <li>
+
+                        <input type="checkbox">
+
+                        Read Today's Newspaper
+
+                    </li>
+
+                    <li>
+
+                        <input type="checkbox">
+
+                        Revise Modern History
+
+                    </li>
+
+                    <li>
+
+                        <input type="checkbox">
+
+                        Practice One Essay
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div class="planner-box">
+
+                <h2>
+
+                    <i class="fas fa-fire"></i>
+
+                    Daily Streak
+
+                </h2>
+
+                <div class="streak">
+
+                    🔥
+
+                    <h1>12 Days</h1>
+
+                    <p>
+
+                        Keep learning every day to maintain your streak.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ===========================
+                EXAM COUNTDOWN
+        ============================ -->
+
+        <section class="countdown">
+
+            <div class="countdown-card">
+
+                <h2>
+
+                    <i class="fas fa-hourglass-half"></i>
+
+                    UPSC Exam Countdown
+
+                </h2>
+
+                <h1 id="countdownDays">
+
+                    250 Days
+
+                </h1>
+
+                <p>
+
+                    Stay consistent and complete your preparation before the examination.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ===========================
+                STUDY STATISTICS
+        ============================ -->
+
+        <section class="statistics">
+
+            <h2>Your Statistics</h2>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <i class="fas fa-book"></i>
+
+                    <h3>125</h3>
+
+                    <p>Topics Completed</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <i class="fas fa-file-circle-check"></i>
+
+                    <h3>320</h3>
+
+                    <p>Questions Solved</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <i class="fas fa-clock"></i>
+
+                    <h3>186</h3>
+
+                    <p>Study Hours</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <i class="fas fa-award"></i>
+
+                    <h3>18</h3>
+
+                    <p>Achievements</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+                <!-- ===========================
+                LATEST UPDATES
+        ============================ -->
+
+        <section class="updates-section">
+
+            <div class="updates-box">
+
+                <h2>
+
+                    <i class="fas fa-bullhorn"></i>
+
+                    Latest Updates
+
+                </h2>
+
+                <div class="update-item">
+
+                    <i class="fas fa-circle-check"></i>
+
+                    <div>
+
+                        <h4>UPSC Notification Released</h4>
+
+                        <p>Check the latest UPSC examination notification and eligibility details.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="update-item">
+
+                    <i class="fas fa-book-open"></i>
+
+                    <div>
+
+                        <h4>New Study Materials Added</h4>
+
+                        <p>Economy, Environment and Geography notes are now available.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="update-item">
+
+                    <i class="fas fa-file-pdf"></i>
+
+                    <div>
+
+                        <h4>Latest PYQs Uploaded</h4>
+
+                        <p>Download the Previous Year Question Papers with solutions.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="updates-box">
+
+                <h2>
+
+                    <i class="fas fa-calendar-days"></i>
+
+                    Upcoming Events
+
+                </h2>
+
+                <table>
+
+                    <tr>
+
+                        <th>Event</th>
+
+                        <th>Date</th>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Prelims Mock Test</td>
+
+                        <td>15 Aug</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Essay Writing Session</td>
+
+                        <td>18 Aug</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Current Affairs Quiz</td>
+
+                        <td>22 Aug</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Interview Workshop</td>
+
+                        <td>30 Aug</td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ===========================
+                MOTIVATION
+        ============================ -->
+
+        <section class="motivation">
+
+            <div class="quote-box">
+
+                <i class="fas fa-quote-left"></i>
+
+                <h2>
+
+                    Motivation of the Day
+
+                </h2>
+
+                <p>
+
+                    "Dream is not that which you see while sleeping, it is something that does not let you sleep."
+
+                </p>
+
+                <h3>
+
+                    — Dr. A. P. J. Abdul Kalam
+
+                </h3>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ===========================
+                QUICK LINKS
+        ============================ -->
+
+        <section class="quick-links">
+
+            <h2>Useful Resources</h2>
+
+            <div class="links-grid">
+
+                <a href="prelims.html">
+
+                    <i class="fas fa-book-open"></i>
+
+                    <span>Prelims Notes</span>
+
+                </a>
+
+                <a href="mains.html">
+
+                    <i class="fas fa-pen"></i>
+
+                    <span>Mains Strategy</span>
+
+                </a>
+
+                <a href="interview.html">
+
+                    <i class="fas fa-user-tie"></i>
+
+                    <span>Interview Tips</span>
+
+                </a>
+
+                <a href="pyq.html">
+
+                    <i class="fas fa-file-pdf"></i>
+
+                    <span>PYQ Downloads</span>
+
+                </a>
+
+                <a href="study-materials.html">
+
+                    <i class="fas fa-folder-open"></i>
+
+                    <span>Study Materials</span>
+
+                </a>
+
+                <a href="current-affairs.html">
+
+                    <i class="fas fa-newspaper"></i>
+
+                    <span>Current Affairs</span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ===========================
+                FOOTER
+        ============================ -->
+
+        <footer class="dashboard-footer">
+
+            <div class="footer-content">
+
+                <div>
+
+                    <h3>
+
+                        UPSC Cloud Portal
+
+                    </h3>
+
+                    <p>
+
+                        Empowering UPSC Aspirants with quality study materials,
+                        preparation strategies and examination guidance.
+
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <h4>
+
+                        Quick Navigation
+
+                    </h4>
+
+                    <ul>
+
+                        <li><a href="dashboard.html">Dashboard</a></li>
+
+                        <li><a href="prelims.html">Prelims</a></li>
+
+                        <li><a href="mains.html">Mains</a></li>
+
+                        <li><a href="interview.html">Interview</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div>
+
+                    <h4>
+
+                        Contact
+
+                    </h4>
+
+                    <p>Email : support@upsccloud.com</p>
+
+                    <p>Phone : +91 9876543210</p>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <p class="copyright">
+
+                © 2026 UPSC Cloud Portal | Designed for UPSC Aspirants | All Rights Reserved.
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../js/supabaseClient.js"></script>
+<script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

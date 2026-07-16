@@ -1,0 +1,1320 @@
+/* ==========================================================
+                    GOOGLE FONT
+========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* ==========================================================
+                    RESET
+========================================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#f4f7fb;
+
+}
+
+
+/* ==========================================================
+                    MAIN CONTAINER
+========================================================== */
+
+.container{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+
+/* ==========================================================
+                    LEFT PANEL
+========================================================== */
+
+.left-panel{
+
+    width:50%;
+
+    background:
+    linear-gradient(rgba(10,61,98,.88),
+    rgba(30,95,116,.92)),
+    url("../assets/images/login-bg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+}
+
+
+.overlay{
+
+    width:80%;
+
+}
+
+
+.overlay h1{
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+    font-weight:700;
+
+}
+
+
+.overlay h2{
+
+    font-size:28px;
+
+    margin-bottom:25px;
+
+    color:#FFD166;
+
+}
+
+
+.overlay p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+}
+
+
+/* ==========================================================
+                    FEATURES
+========================================================== */
+
+.features{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+
+.features div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    font-size:18px;
+
+}
+
+
+.features i{
+
+    width:50px;
+
+    height:50px;
+
+    background:white;
+
+    color:#0A3D62;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+}
+
+
+/* ==========================================================
+                    RIGHT PANEL
+========================================================== */
+
+.right-panel{
+
+    width:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#F8FAFD;
+
+}
+
+
+/* ==========================================================
+                    LOGIN BOX
+========================================================== */
+
+.login-box{
+
+    width:420px;
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+
+.login-box h2{
+
+    text-align:center;
+
+    color:#0A3D62;
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+
+.subtitle{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:35px;
+
+}
+
+
+/* ==========================================================
+                    INPUT GROUP
+========================================================== */
+
+.input-group{
+
+    margin-bottom:22px;
+
+}
+
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#333;
+
+}
+
+
+.input-group input{
+
+    width:100%;
+
+    padding:14px 18px;
+
+    border:1px solid #ccc;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+
+.input-group input:focus{
+
+    border-color:#0A3D62;
+
+    outline:none;
+
+    box-shadow:0 0 8px rgba(10,61,98,.2);
+
+}
+
+/* ==========================================================
+                    PASSWORD FIELD
+========================================================== */
+
+.password-box{
+
+    position:relative;
+
+}
+
+.password-box input{
+
+    width:100%;
+
+    padding-right:50px;
+
+}
+
+.password-box i{
+
+    position:absolute;
+
+    right:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+
+    color:#666;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.password-box i:hover{
+
+    color:#0A3D62;
+
+}
+
+
+/* ==========================================================
+                    OPTIONS
+========================================================== */
+
+.options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+    font-size:15px;
+
+}
+
+.options label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#555;
+
+}
+
+.options input[type="checkbox"]{
+
+    cursor:pointer;
+
+}
+
+.options a{
+
+    text-decoration:none;
+
+    color:#0A3D62;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.options a:hover{
+
+    color:#F4A261;
+
+}
+
+
+/* ==========================================================
+                    LOGIN BUTTON
+========================================================== */
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#0A3D62;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#F4A261;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+
+}
+
+
+/* ==========================================================
+                    DIVIDER
+========================================================== */
+
+.divider{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:30px 0;
+
+    position:relative;
+
+}
+
+.divider::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    width:42%;
+
+    height:1px;
+
+    background:#ddd;
+
+}
+
+.divider::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:0;
+
+    width:42%;
+
+    height:1px;
+
+    background:#ddd;
+
+}
+
+.divider span{
+
+    background:white;
+
+    padding:0 15px;
+
+    color:#666;
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================================
+                    REGISTER LINK
+========================================================== */
+
+.register-link{
+
+    text-align:center;
+
+    font-size:15px;
+
+    margin-bottom:18px;
+
+}
+
+.register-link a{
+
+    color:#0A3D62;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.register-link a:hover{
+
+    color:#F4A261;
+
+}
+
+
+/* ==========================================================
+                    HOME LINK
+========================================================== */
+
+.home-link{
+
+    text-align:center;
+
+}
+
+.home-link a{
+
+    color:#555;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.home-link a:hover{
+
+    color:#0A3D62;
+
+}
+
+
+/* ==========================================================
+                    INPUT HOVER EFFECT
+========================================================== */
+
+.input-group input:hover{
+
+    border-color:#0A3D62;
+
+}
+
+
+/* ==========================================================
+                    LOGIN BOX ANIMATION
+========================================================== */
+
+.login-box{
+
+    animation:slideUp .8s ease;
+
+}
+
+@keyframes slideUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+                    BUTTON CLICK EFFECT
+========================================================== */
+
+button:active{
+
+    transform:scale(.98);
+
+}
+
+/* ==========================================================
+                    ERROR MESSAGE
+========================================================== */
+
+.error{
+
+    color:#d62828;
+
+    font-size:14px;
+
+    margin-top:6px;
+
+}
+
+
+/* ==========================================================
+                    SUCCESS MESSAGE
+========================================================== */
+
+.success{
+
+    color:#2a9d8f;
+
+    font-size:14px;
+
+    margin-top:6px;
+
+}
+
+
+/* ==========================================================
+                    INPUT STATES
+========================================================== */
+
+.input-group input.error-input{
+
+    border:2px solid #d62828;
+
+}
+
+.input-group input.success-input{
+
+    border:2px solid #2a9d8f;
+
+}
+
+
+/* ==========================================================
+                    LOADING BUTTON
+========================================================== */
+
+button.loading{
+
+    background:#6c757d;
+
+    cursor:not-allowed;
+
+    opacity:0.8;
+
+}
+
+
+/* ==========================================================
+                    SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f1f1f1;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#0A3D62;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#1E5F74;
+
+}
+
+
+/* ==========================================================
+                    TEXT SELECTION
+========================================================== */
+
+::selection{
+
+    background:#F4A261;
+
+    color:white;
+
+}
+
+
+/* ==========================================================
+                    RESPONSIVE DESIGN
+========================================================== */
+
+@media(max-width:1100px){
+
+    .login-box{
+
+        width:380px;
+
+        padding:40px;
+
+    }
+
+    .overlay h1{
+
+        font-size:36px;
+
+    }
+
+}
+
+
+@media(max-width:900px){
+
+    .container{
+
+        flex-direction:column;
+
+    }
+
+    .left-panel{
+
+        width:100%;
+
+        min-height:320px;
+
+    }
+
+    .right-panel{
+
+        width:100%;
+
+        padding:40px 20px;
+
+    }
+
+    .login-box{
+
+        width:100%;
+
+        max-width:500px;
+
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    .overlay{
+
+        width:90%;
+
+        text-align:center;
+
+    }
+
+    .overlay h1{
+
+        font-size:30px;
+
+    }
+
+    .overlay h2{
+
+        font-size:24px;
+
+    }
+
+    .overlay p{
+
+        font-size:16px;
+
+    }
+
+    .features{
+
+        margin-top:30px;
+
+    }
+
+    .features div{
+
+        justify-content:center;
+
+    }
+
+    .login-box{
+
+        padding:35px 25px;
+
+    }
+
+}
+
+
+@media(max-width:480px){
+
+    .overlay h1{
+
+        font-size:26px;
+
+    }
+
+    .overlay h2{
+
+        font-size:20px;
+
+    }
+
+    .overlay p{
+
+        font-size:15px;
+
+    }
+
+    .login-box{
+
+        padding:25px 20px;
+
+    }
+
+    .login-box h2{
+
+        font-size:28px;
+
+    }
+
+    .subtitle{
+
+        font-size:14px;
+
+    }
+
+    .options{
+
+        flex-direction:column;
+
+        gap:12px;
+
+        align-items:flex-start;
+
+    }
+
+    button{
+
+        font-size:16px;
+
+        padding:14px;
+
+    }
+
+}
+
+
+/* ==========================================================
+                    INPUT FOCUS ANIMATION
+========================================================== */
+
+.input-group input{
+
+    transition:all .3s ease;
+
+}
+
+.input-group input:focus{
+
+    transform:translateY(-2px);
+
+}
+
+
+/* ==========================================================
+                    FEATURE ICON ANIMATION
+========================================================== */
+
+.features i{
+
+    transition:.4s;
+
+}
+
+.features div:hover i{
+
+    transform:rotate(360deg);
+
+    background:#FFD166;
+
+}
+
+
+/* ==========================================================
+                    BUTTON SHINE EFFECT
+========================================================== */
+
+button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+button::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.25);
+
+    transition:.5s;
+
+}
+
+button:hover::before{
+
+    left:100%;
+
+}
+
+
+/* ==========================================================
+                    LINK TRANSITIONS
+========================================================== */
+
+a{
+
+    transition:.3s;
+
+}
+
+
+/* ==========================================================
+                    END OF AUTH CSS
+========================================================== */
+
+/* ==========================================================
+                REGISTER PAGE
+========================================================== */
+
+.register-container{
+
+    width:100%;
+
+    min-height:100vh;
+
+    background:linear-gradient(135deg,#0A3D62,#1E5F74);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:60px 20px;
+
+}
+
+
+.register-box{
+
+    width:100%;
+
+    max-width:850px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:45px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+
+    animation:slideUp .8s ease;
+
+}
+
+
+/* ==========================================================
+                LOGO
+========================================================== */
+
+.logo{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.logo i{
+
+    font-size:60px;
+
+    color:#0A3D62;
+
+    margin-bottom:10px;
+
+}
+
+.logo h1{
+
+    color:#0A3D62;
+
+    margin-bottom:8px;
+
+}
+
+.logo p{
+
+    color:#666;
+
+    font-size:17px;
+
+}
+
+
+/* ==========================================================
+                SECTION TITLES
+========================================================== */
+
+.register-box h2{
+
+    color:#0A3D62;
+
+    margin-top:35px;
+
+    margin-bottom:18px;
+
+    padding-bottom:10px;
+
+    border-bottom:2px solid #F4A261;
+
+}
+
+
+/* ==========================================================
+                SELECT BOXES
+========================================================== */
+
+select{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #ccc;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    background:white;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+select:focus{
+
+    outline:none;
+
+    border-color:#0A3D62;
+
+    box-shadow:0 0 8px rgba(10,61,98,.25);
+
+}
+
+
+/* ==========================================================
+                DATE FIELD
+========================================================== */
+
+input[type="date"]{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #ccc;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+}
+
+
+/* ==========================================================
+                PASSWORD STRENGTH
+========================================================== */
+
+.strength{
+
+    margin-top:15px;
+
+    margin-bottom:25px;
+
+}
+
+.strength-bar{
+
+    width:100%;
+
+    height:10px;
+
+    background:#ddd;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+#strengthFill{
+
+    width:0%;
+
+    height:100%;
+
+    background:red;
+
+    transition:.4s;
+
+}
+
+#strengthText{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:#555;
+
+    font-size:14px;
+
+}
+
+
+/* ==========================================================
+                TERMS
+========================================================== */
+
+.terms{
+
+    margin-bottom:25px;
+
+}
+
+.terms label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+    color:#444;
+
+    font-size:15px;
+
+}
+
+.terms input{
+
+    transform:scale(1.2);
+
+}
+
+
+/* ==========================================================
+                BUTTON
+========================================================== */
+
+.register-box button{
+
+    margin-top:10px;
+
+}
+
+
+/* ==========================================================
+                BOTTOM LINKS
+========================================================== */
+
+.bottom-links{
+
+    margin-top:35px;
+
+    text-align:center;
+
+}
+
+.bottom-links p{
+
+    margin-bottom:15px;
+
+}
+
+.bottom-links a{
+
+    color:#0A3D62;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.bottom-links a:hover{
+
+    color:#F4A261;
+
+}
+
+
+/* ==========================================================
+                INPUT ANIMATION
+========================================================== */
+
+.register-box input,
+.register-box select{
+
+    transition:.3s;
+
+}
+
+.register-box input:hover,
+.register-box select:hover{
+
+    border-color:#0A3D62;
+
+}
+
+.register-box input:focus,
+.register-box select:focus{
+
+    transform:translateY(-2px);
+
+}
+
+
+/* ==========================================================
+                RESPONSIVE DESIGN
+========================================================== */
+
+@media(max-width:768px){
+
+    .register-box{
+
+        padding:30px;
+
+    }
+
+    .logo i{
+
+        font-size:50px;
+
+    }
+
+    .logo h1{
+
+        font-size:28px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .register-box{
+
+        padding:20px;
+
+    }
+
+    .logo h1{
+
+        font-size:24px;
+
+    }
+
+    .logo p{
+
+        font-size:15px;
+
+    }
+
+    .register-box h2{
+
+        font-size:22px;
+
+    }
+
+}
+
+
+/* ==========================================================
+                END OF REGISTER CSS
+========================================================== */

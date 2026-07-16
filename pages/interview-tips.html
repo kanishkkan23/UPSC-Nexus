@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPSC Personality Test (Interview) Tips</title>
+
+    <link rel="stylesheet" href="../css/resources.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Session Guard -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabaseClient.js"></script>
+    <script>
+        (async function() {
+            if (window.supabaseClient) {
+                const { data: { session } } = await window.supabaseClient.auth.getSession();
+                if (!session) {
+                    window.location.href = "login.html";
+                }
+            }
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="logo">
+            <i class="fa-solid fa-landmark"></i>
+            <h2>UPSC Hub</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="prelims.html">Prelims</a></li>
+                <li><a href="mains.html">Mains</a></li>
+                <li><a href="interview.html">Interview</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">Interview Guide</span>
+            <h1>Personality Test Strategy</h1>
+            <h3>Presenting Your Best Self to the UPSC Board</h3>
+            <p>
+                The Personality Test is not a test of knowledge, but a test of character, integrity, intellectual capability, and balance of judgment. Learn how to master mock reviews and present answers with poise.
+            </p>
+            <div class="hero-buttons">
+                <a href="#daf-guide" class="btn-primary">DAF Preparation</a>
+                <a href="#etiquette" class="btn-secondary">Interview Etiquette</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="../assets/images/interview.jpg" alt="Interview Strategy Guide">
+        </div>
+    </section>
+
+    <!-- ================= DAF GUIDE ================= -->
+    <section class="content-section" id="daf-guide">
+        <h2>Decoding the Detailed Application Form (DAF)</h2>
+        <p>
+            Around 80% of the questions in the UPSC interview originate from your DAF. Thoroughly study and prepare every word written in your application:
+        </p>
+
+        <ul class="resource-list">
+            <li><strong>Name and Surname</strong> — Understand the meaning, historical references, and famous personalities sharing your name.</li>
+            <li><strong>Birthplace & State</strong> — Research demographic stats, geographic challenges, local history, administration problems, and unique cultural points.</li>
+            <li><strong>Educational Background</strong> — Prepare fundamental core concepts of your graduation subject and its application to civil administration.</li>
+            <li><strong>Hobbies & Achievements</strong> — Do not write fake hobbies. Research current developments, technical details, and famous achievements relating to your hobbies.</li>
+        </ul>
+    </section>
+
+    <!-- ================= ETIQUETTE ================= -->
+    <section class="content-section" id="etiquette">
+        <h2>UPSC Board Etiquette & Tips</h2>
+        <p>
+            Your non-verbal communication, posture, and facial expressions speak volumes before you answer. Master these habits:
+        </p>
+
+        <ul class="resource-list">
+            <li><strong>Postures and Greetings</strong> — Enter with permission, walk confidently, sit straight, place hands on your lap, make gentle eye contact, and politely greet the chairperson and other board members.</li>
+            <li><strong>Handling Unknown Answers</strong> — Never guess or blabber. If you don't know the answer, confidently state: <em>"I do not know the exact details, sir/ma'am. I will read up on this."</em> Honesty is highly valued.</li>
+            <li><strong>Balance of Judgment</strong> — Never take extreme ideological stances. Show progressive, balanced, constitutionally aligned, and problem-solving perspectives.</li>
+        </ul>
+    </section>
+
+    <!-- ================= ACTION ================= -->
+    <section class="action-section">
+        <h2>Complete Your Interview Preparation</h2>
+        <p>Explore preparation resources or return to the main dashboard.</p>
+        <div class="action-buttons">
+            <a href="dashboard.html" class="btn-primary">Go to Dashboard</a>
+            <a href="interview.html" class="btn-outline">Back to Interview Main</a>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <p class="copyright">
+            © 2026 UPSC Cloud Portal | All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+</html>

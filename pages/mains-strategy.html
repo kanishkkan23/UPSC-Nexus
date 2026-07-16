@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPSC Mains Strategy & Guide</title>
+
+    <link class="stylesheet" href="../css/resources.css">
+    <link rel="stylesheet" href="../css/resources.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Session Guard -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabaseClient.js"></script>
+    <script>
+        (async function() {
+            if (window.supabaseClient) {
+                const { data: { session } } = await window.supabaseClient.auth.getSession();
+                if (!session) {
+                    window.location.href = "login.html";
+                }
+            }
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="logo">
+            <i class="fa-solid fa-landmark"></i>
+            <h2>UPSC Hub</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="prelims.html">Prelims</a></li>
+                <li><a href="mains.html">Mains</a></li>
+                <li><a href="interview.html">Interview</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">Mains Mastery</span>
+            <h1>Mains Written Strategy</h1>
+            <h3>Structured Answers, Analytical Insights, and High Scores</h3>
+            <p>
+                The Mains stage evaluates your intellectual depth, critical understanding, and expression. Learn how to draft answers that stand out, cover General Studies (GS1-4), and write high-scoring essays.
+            </p>
+            <div class="hero-buttons">
+                <a href="#core-writing" class="btn-primary">Answer Writing Strategy</a>
+                <a href="#gs-papers" class="btn-secondary">GS Breakdown</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="../assets/images/mains.jpg" alt="Mains Strategy Guide">
+        </div>
+    </section>
+
+    <!-- ================= ANSWER WRITING ================= -->
+    <section class="content-section" id="core-writing">
+        <h2>Structuring an Answer (IBC Framework)</h2>
+        <p>
+            UPSC evaluators check hundreds of sheets. Make your answers easy to read, structured, and visually engaging. Follow the <strong>Introduction, Body, Conclusion (IBC)</strong> model:
+        </p>
+
+        <ul class="resource-list">
+            <li><strong>Introduction (10-15% of space)</strong> — Start with a definition, dynamic fact, current news context, or constitutional article. Keep it short and precise.</li>
+            <li><strong>Body (70-80% of space)</strong> — Answer all parts of the question. Use clear subheadings. Write in points, use bullet lists, draw flowcharts, maps, and diagrams.</li>
+            <li><strong>Conclusion (10-15% of space)</strong> — Summarize with a forward-looking, optimistic, and constructive note. Suggest path breaking government initiatives or committee recommendations (e.g., ARC-2 reports).</li>
+        </ul>
+    </section>
+
+    <!-- ================= GS PAPERS BREAKDOWN ================= -->
+    <section class="content-section" id="gs-papers">
+        <h2>General Studies Paper 1–4 Focus Areas</h2>
+        <p>
+            Each General Studies paper represents different competencies. Focus on these main sections:
+        </p>
+
+        <ul class="resource-list">
+            <li><strong>GS Paper 1 (Heritage, Geography & Society)</strong> — Memorize timeline summaries for Indian Art, Culture, Modern History, and World Geography mapping. Include social issues case studies.</li>
+            <li><strong>GS Paper 2 (Governance, Constitution & IR)</strong> — Cite constitutional articles, supreme court rulings, and committee recommendations. Map bilateral links.</li>
+            <li><strong>GS Paper 3 (Economy, Science & Environment)</strong> — Use graphs, economic metrics, NITI Aayog guidelines, and security charts. Focus on agricultural and environmental policies.</li>
+            <li><strong>GS Paper 4 (Ethics, Integrity & Aptitude)</strong> — Use diagrams (concentric values), cite quotes from philosophers, write realistic case study solutions, and practice moral dilemmas.</li>
+        </ul>
+    </section>
+
+    <!-- ================= ACTION ================= -->
+    <section class="action-section">
+        <h2>Master Your Writing Today</h2>
+        <p>Check the previous year Mains question papers to understand analytical questioning trends.</p>
+        <div class="action-buttons">
+            <a href="pyq.html" class="btn-primary">Mains PYQ Papers</a>
+            <a href="dashboard.html" class="btn-outline">Back to Dashboard</a>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <p class="copyright">
+            © 2026 UPSC Cloud Portal | All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPSC Cloud | User Profile</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/profile.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+    <!-- ===========================
+            SIDEBAR
+    ============================ -->
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-landmark"></i>
+            <h2>UPSC Hub</h2>
+        </div>
+        <ul class="menu">
+            <li>
+                <a href="dashboard.html">
+                    <i class="fas fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="prelims.html">
+                    <i class="fas fa-book-open"></i>
+                    Preliminary
+                </a>
+            </li>
+            <li>
+                <a href="mains.html">
+                    <i class="fas fa-pen"></i>
+                    Mains
+                </a>
+            </li>
+            <li>
+                <a href="interview.html">
+                    <i class="fas fa-user-tie"></i>
+                    Interview
+                </a>
+            </li>
+            <li>
+                <a href="current-affairs.html">
+                    <i class="fas fa-newspaper"></i>
+                    Current Affairs
+                </a>
+            </li>
+            <li>
+                <a href="pyq.html">
+                    <i class="fas fa-file-pdf"></i>
+                    PYQs
+                </a>
+            </li>
+            <li>
+                <a href="study-materials.html">
+                    <i class="fas fa-folder-open"></i>
+                    Study Materials
+                </a>
+            </li>
+            <li>
+                <a href="video-resources.html">
+                    <i class="fab fa-youtube"></i>
+                    Video Lectures
+                </a>
+            </li>
+            <li>
+                <a href="exam-calendar.html">
+                    <i class="fas fa-calendar-days"></i>
+                    Exam Calendar
+                </a>
+            </li>
+            <li class="active">
+                <a href="profile.html">
+                    <i class="fas fa-user-circle"></i>
+                    Profile
+                </a>
+            </li>
+        </ul>
+        <div class="logout">
+            <a href="login.html">
+                <i class="fas fa-right-from-bracket"></i>
+                Logout
+            </a>
+        </div>
+    </aside>
+
+    <!-- ===========================
+            MAIN CONTENT
+    ============================ -->
+    <main class="main-content">
+        <!-- Top Navigation -->
+        <header class="topbar">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search resources...">
+            </div>
+            <div class="top-icons">
+                <i class="fas fa-bell"></i>
+                <div class="profile">
+                    <img id="topbar-avatar" src="../assets/images/user.png" alt="User"
+                        style="border-radius:50%;width:40px;height:40px;object-fit:cover;">
+                    <span>Welcome, Aspirant</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Profile Section -->
+        <section class="profile-section">
+            <div class="profile-header">
+                <h1>My Profile</h1>
+                <p>Manage your account settings and UPSC details</p>
+            </div>
+
+            <div class="profile-grid">
+                <!-- Left profile card -->
+                <div class="profile-card info-summary-card">
+                    <div class="avatar-container">
+                        <div class="avatar-wrapper" id="avatarTrigger" style="position: relative; display: inline-block; cursor: pointer;">
+                            <img src="../assets/images/user.png" alt="User Avatar" class="profile-avatar" id="avatarImage">
+                            <div class="avatar-overlay" style="position: absolute; bottom: 5px; right: 5px; background: rgba(0,0,0,0.6); color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; border: 2px solid white;">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                            <input type="file" id="avatarFileInput" accept="image/*" style="display: none;">
+                        </div>
+                        <h2 id="summaryName">Aspirant Name</h2>
+                        <p id="summaryEmail">email@example.com</p>
+                        <span class="badge user-badge" id="summaryRole">Aspirant</span>
+                    </div>
+                    <hr>
+                    <div class="summary-details">
+                        <div class="summary-item">
+                            <span class="label">Attempt Status</span>
+                            <span class="value" id="summaryAttempt">First Attempt</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Preferred Language</span>
+                            <span class="value" id="summaryLanguage">English</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">State</span>
+                            <span class="value" id="summaryState">Not Selected</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right profile form card -->
+                <div class="profile-card details-card">
+                    <div class="card-header">
+                        <h2>Personal & UPSC Details</h2>
+                        <button class="btn-edit" id="btnEditProfile">
+                            <i class="fas fa-edit"></i> Edit Details
+                        </button>
+                    </div>
+
+                    <form id="profileForm" class="profile-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="profileName">Full Name</label>
+                                <input type="text" id="profileName" disabled required>
+                            </div>
+                            <div class="form-group">
+                                <label for="profileEmail">Email Address</label>
+                                <input type="email" id="profileEmail" disabled readonly>
+                                <small>Email cannot be changed.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="profileMobile">Mobile Number</label>
+                                <input type="tel" id="profileMobile" maxlength="10" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="profileDob">Date of Birth</label>
+                                <input type="date" id="profileDob" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="profileGender">Gender</label>
+                                <select id="profileGender" disabled>
+                                    <option value="">Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="profileLanguage">Preferred Language</label>
+                                <select id="profileLanguage" disabled>
+                                    <option value="">Select Language</option>
+                                    <option value="English">English</option>
+                                    <option value="Hindi">Hindi</option>
+                                    <option value="Kannada">Kannada</option>
+                                    <option value="Tamil">Tamil</option>
+                                    <option value="Telugu">Telugu</option>
+                                    <option value="Malayalam">Malayalam</option>
+                                    <option value="Marathi">Marathi</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="profileState">State</label>
+                                <select id="profileState" disabled>
+                                    <option value="">Select State</option>
+                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                    <option value="Assam">Assam</option>
+                                    <option value="Bihar">Bihar</option>
+                                    <option value="Chhattisgarh">Chhattisgarh</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Haryana">Haryana</option>
+                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                    <option value="Jharkhand">Jharkhand</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Odisha">Odisha</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Telangana">Telangana</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="West Bengal">West Bengal</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="profileQualification">Education Qualification</label>
+                                <select id="profileQualification" disabled>
+                                    <option value="">Select Qualification</option>
+                                    <option value="Graduate">Graduate</option>
+                                    <option value="Post Graduate">Post Graduate</option>
+                                    <option value="Engineering">Engineering</option>
+                                    <option value="Medical">Medical</option>
+                                    <option value="Law">Law</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="profileAttempt">UPSC Attempt</label>
+                                <select id="profileAttempt" disabled>
+                                    <option value="">Select Attempt</option>
+                                    <option value="First Attempt">First Attempt</option>
+                                    <option value="Second Attempt">Second Attempt</option>
+                                    <option value="Third Attempt">Third Attempt</option>
+                                    <option value="Fourth Attempt">Fourth Attempt</option>
+                                    <option value="More than Four">More than Four</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-actions" id="formActions" style="display: none;">
+                            <button type="button" class="btn-cancel" id="btnCancelEdit">Cancel</button>
+                            <button type="submit" class="btn-save" id="btnSaveProfile">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../js/supabaseClient.js"></script>
+<script src="../js/profile.js"></script>
+
+</body>
+</html>
